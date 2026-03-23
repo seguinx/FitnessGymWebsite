@@ -1,0 +1,320 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #1a0000, #a31414); /*Ajout d'un dégradé rouge foncé pour un look plus dynamique*/
+    color: white;
+    text-align: center;
+    padding: 30px 20px 50px;
+    border-bottom: red solid 0.2rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 0 0 20px;
+    text-shadow: 30px 35px 35px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-style: oblique;
+}
+
+header img {
+    display: block;
+    margin: 20px auto 30px;
+    border-radius: 20px;
+    border: 3px solid #c00000;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* NAVIGATION */
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.nav-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 70px;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: 2px solid white;
+    border-radius: 12px;/*Bordure arrondie pour un look plus moderne*/
+    transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nav-box:hover {
+    background-color: #c00000;
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    min-height: 70vh;
+    background-image: url("../assets/gym_bg.png");/*Beaucoup de difficulté à mettre l'image dans html, le layering de l'image de fond et du texte a été fait en CSS pour éviter les problèmes de z-index et de positionnement rencontrés*/
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-top: #450303 solid 0.5rem;
+    border-bottom: #450303 solid 0.5rem;
+    padding: 1.25rem;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: rgb(255, 0, 0);
+}
+
+.hero::before {/*Concept trouver en ligne pour ajouter une superposition sombre sur l'image de fond, améliorant la lisibilité du texte*/
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 5, 5, 0.5);
+    z-index: 1;
+}
+
+.big-title {
+    font-size: 10rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 12px 12px 0 rgba(0, 0, 0, 0.45);
+}
+
+.sub-title {
+    margin: 20px 0 0;
+    font-size: 4rem;
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+    text-shadow: 8px 8px 0 rgba(0, 0, 0, 0.45);
+}
+
+.small-text {
+    margin-top: 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* LOCAUX DU GYM */
+
+.local {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 80px 10%;
+    background-color: #0b0b0b;
+    border-top: #a31414 solid 0.2rem;
+}
+
+.local.reverse {
+    flex-direction: row-reverse;
+}
+
+.local-image img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid red;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.local-image img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 30px rgba(255, 0, 0, 0.5);
+}
+
+.local-text {
+    max-width: 500px;
+    color: white;
+}
+
+.local-text h2 {
+    color: red;
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.local-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+/*BTN*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-top {/***/
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #7a0000, #c00000);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(122, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-top:hover {
+    background: linear-gradient(135deg, #c00000, #b30000);
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 35px rgba(192, 0, 0, 0.6);
+}
+
+/* FOOTER */
+
+.footer {
+    background: linear-gradient(135deg, #1a0000, #a31414);
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    border-top: #a31414 solid 0.2rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    background: rgba(255, 68, 68, 0.2);
+}
+
+
+
+/* TABLETTE / MOBILE */
+
+@media (max-width: 768px) {
+    header {
+        padding: 20px 15px 30px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 20px 0;
+    }
+
+    .nav-box {
+        width: 220px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 20px;
+    }
+
+    .big-title {
+        font-size: 5rem;
+    }
+
+    .sub-title {
+        font-size: 2.5rem;
+    }
+
+    .small-text {
+        font-size: 1.4rem;
+        margin-top: 25px;
+    }
+
+    .local,
+    .local.reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 50px 20px;
+    }
+
+    .local-image img {
+        width: 100%;
+        max-width: 500px;
+        height: 300px;
+    }
+
+    .local-text {
+        max-width: 100%;
+    }
+
+    .local-text h2 {
+        font-size: 2rem;
+    }
+
+    .local-text p {
+        font-size: 1rem;
+    }
+}
+

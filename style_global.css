@@ -1,0 +1,240 @@
+/* GLOBAL - TOUT CE QUI EST COMMUN À TOUTES LES PAGES */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* CONTAINER COMMUN */
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+/* TYPOGRAPHIE COMMUNE */
+h2 {
+    font-size: 3rem;
+    color: #7a0000;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+h3 {
+    color: #7a0000;
+    margin-top: 0;
+}
+
+/* SECTION COMMUNE */
+section p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* CARTES QUI SONT EN COMMUN */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+
+/* HEADER QUI RESTE */
+header {
+    background: linear-gradient(135deg, #2b0000, #5a0000, #7a0000);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background-color: #c00000;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* BOUTON HAUT SANS JAVASCRIPT - TOUJOURS VISIBLE */
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #7a0000, #c00000);
+    color: rgb(255, 255, 255);
+    border-radius: 50%; /*Rend le bouton rond*/
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(122, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.scroll-top:hover {
+    background: linear-gradient(135deg, #c00000, #b30000);
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 12px 35px rgba(192, 0, 0, 0.6);
+}
+
+/* FOOTER - LIENS COTE A COTE SERRÉS */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 8px;        /* SPACE MINI */
+    margin-top: 15px;
+    
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;  /* ← PLUS PETIT */
+    padding: 6px 12px;   /* ← PLUS SERRÉ */
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    background: linear-gradient(135deg, #7a0000, #c00000);
+    transform: translateY(-1px);
+}
+
+/* MOBILE - 2 par ligne max */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .scroll-top {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* RESPONSIVE GLOBAL */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .menu {
+        gap: 0.5rem;
+    }
+    
+    .menu a {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+    }
+}

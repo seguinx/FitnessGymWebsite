@@ -1,0 +1,99 @@
+.contact-section{
+    max-width:70rem;
+    margin:3rem auto;
+    padding:2rem;
+    display:flex;
+    gap:2rem;
+    justify-content:center;
+}
+
+.contact-left,
+.contact-right{
+    background:white;
+    padding:2rem;
+    border: 0.2rem solid #d50808;
+    box-shadow:0 0.4rem 1rem rgba(0,0,0,0.1);
+    border-radius: 12px;
+    flex:1;/*Permet à chaque section de prendre une part égale de l'espace disponible, page plus équilibrée*/
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-left:hover,
+.contact-right:hover{
+    transform:translateY(-0.3rem);
+    box-shadow:0 1rem 1.6rem rgba(235, 4, 4, 0.18);
+}
+
+.contact-left h2,
+.contact-right h2{
+    color:#8b0000;
+    font-style:italic;
+    margin-bottom:1rem;
+    text-align:center;
+}
+
+.contact-left p{
+    margin:0.5rem 0;
+    text-align:center;
+}
+
+.contact-right form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-right label{
+    margin-top:0.6rem;
+    font-weight:bold;
+}
+
+.contact-right input,
+.contact-right textarea{
+    padding:0.6rem;
+    border:1px solid #bbb;
+    border-radius:0.3rem;
+    margin-top:0.3rem;
+}
+
+.contact-right textarea{
+    height:7rem;
+    resize:vertical;
+}
+
+.contact-right button{
+    margin-top:1rem;
+    padding:0.7rem;
+    background:#930202;
+    color:white;
+    border:none;
+    border-radius:0.3rem;
+    cursor:pointer;
+}
+
+.contact-right button:hover{
+
+    background:#ff0000;
+}
+
+/* RESPONSIVE CONTACT */
+@media (max-width:768px){
+
+.contact-section{
+    flex-direction:column;
+    padding:1.5rem;
+}
+
+.contact-left,
+.contact-right{
+    width:100%;
+}
+
+.contact-left h2,
+.contact-right h2{
+    font-size:1.6rem;
+}
+
+.contact-right textarea{
+    height:6rem;
+}
+}
